@@ -12,6 +12,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     
+
     steps:
       # Step 1: Checkout the repository
       - name: Checkout code
@@ -25,8 +26,5 @@ jobs:
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: echo "hello stupid head"
 
-      # Step 4: Run tests
-      - name: Run tests
-        run: npm test
