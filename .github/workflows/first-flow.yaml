@@ -20,7 +20,7 @@ jobs:
         run: echo "test-var=julian">> $GITHUB_ENV
 
   kuku-pupu:
-    needs: test
+    #needs: test
     runs-on: ubuntu-latest
     steps:
       # Step 1: Checkout the repository
