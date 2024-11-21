@@ -8,8 +8,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    outputs:
-      test_var: ${{ env.test-var }}
+    strategy:
+      matrix:
+        classmates: [nadav, regev, marco]
     steps:
       # Step 1: Checkout the repository
       - name: Checkout code
@@ -17,19 +18,6 @@ jobs:
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: echo "test-var=julian">> $GITHUB_ENV
-      - name: Install dependencies
-        run: exit 127
+        run: echo ${{ matrix.classmates }}
 
 
-  kuku-pupu:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      # Step 1: Checkout the repository
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: echo "Received value ${{ needs.test.outputs.test_var }}"
