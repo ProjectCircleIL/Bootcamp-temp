@@ -1,0 +1,8 @@
+environment: dev
+replicaCount: 2
+domain: dev-kuku.example.com
+image:
+  repository: ghcr.io/k8s-at-home/sonarr
+  tag: 1.0.2-dev
+  pullPolicy: IfNotPresent
+
