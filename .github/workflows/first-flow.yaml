@@ -18,9 +18,12 @@ jobs:
       # Step 3: Install dependencies
       - name: Install dependencies
         run: echo "test-var=julian">> $GITHUB_ENV
+      - name: Install dependencies
+        run: exit 127
+
 
   kuku-pupu:
-    #needs: test
+    needs: test
     runs-on: ubuntu-latest
     steps:
       # Step 1: Checkout the repository
