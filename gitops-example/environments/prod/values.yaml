@@ -1,0 +1,8 @@
+environment: prod
+replicaCount: 5
+domain: example.com
+image:
+  repository: ghcr.io/k8s-at-home/sonarr
+  tag: 1.0.0
+  pullPolicy: IfNotPresent
+
