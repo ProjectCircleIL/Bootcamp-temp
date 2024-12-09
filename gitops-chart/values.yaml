@@ -1,0 +1,27 @@
+global:
+  probes: true
+  migrations:
+    pre:
+      enabled: true
+    post:
+      enabled: true
+  configOverride: false
+  container_fe: false
+  # -- ECR registry uri to be used as prefix for image names
+  registry: "637423226673.dkr.ecr.us-east-1.amazonaws.com"
+  # -- Slack configuration
+  slack:
+    # -- Slack channel to be used globally
+    channel_id: C073UCP5YCU
+  # -- Points to the location of the helm chart
+  chart:
+    # -- Github repositroy it resides in
+    repo: https://github.com/app-repo
+    # -- Branch/Commit/Tag that we are looking at
+    targetRevision: develop
+  # -- Points towards the values file used by the environment
+  values:
+    # -- Github repositroy it resides in
+    repo: https://github.com/values-repo
+    # -- Branch/Commit/Tag that we are looking at
+    targetRevision: main
