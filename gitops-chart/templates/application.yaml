@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   sources:
-    - path: helm
+    - path: app-chart
       repoURL: "{{ .Values.global.chart.repo }}"
       targetRevision: "{{ .Values.global.chart.targetRevision }}"
       helm:

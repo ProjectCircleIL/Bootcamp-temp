@@ -16,12 +16,14 @@ global:
   # -- Points to the location of the helm chart
   chart:
     # -- Github repositroy it resides in
-    repo: https://github.com/app-repo
+    repo: https://github.com/ProjectCircleIL/Bootcamp-temp.git
     # -- Branch/Commit/Tag that we are looking at
     targetRevision: develop
   # -- Points towards the values file used by the environment
   values:
     # -- Github repositroy it resides in
-    repo: https://github.com/values-repo
+    repo: https://github.com/ProjectCircleIL/Bootcamp-temp.git
     # -- Branch/Commit/Tag that we are looking at
     targetRevision: main
+
+replicaCount: 2
